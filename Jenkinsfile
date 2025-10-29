@@ -15,6 +15,23 @@ pipeline {
                 always  { echo 'Build process completed.' }
             }
         }
+        stage('Build Docker Image') {
+    steps {
+        echo 'Building Docker Image'
+        sh '''
+            echo "Current directory:"
+            pwd
+            echo "Files in workspace:"
+            ls -l
+            echo "Files in target folder:"
+            ls -l target || echo "target folder not found"
+            echo "Contents of Dockerfile:"
+            cat Dockerfile
+        '''
+        sh 'docker build -t varinfoservices .'
+    }
+}
+
 
         stage('Stage 2: Build Docker Image') {
             steps {
