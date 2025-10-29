@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+        
+        }
+
+        .hero {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.8) 100%), url('https://cdn.wallpapersafari.com/24/74/zgeTuV.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+        }
+
+        .logo {
+            width: 150px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .language-select {
+            background: rgba(0, 0, 0, 0.4);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 8px 20px;
+            border-radius: 4px;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .language-select svg {
+            margin-right: 5px;
+        }
+
+        .sign-in-btn {
+            background-color: #e50914;
+            color: white;
+            border: none;
+            font-size: 16px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .hero-text {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .email-form {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .email-input {
+            width: 100%;
+            max-width: 450px;
+            padding: 15px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .email-input::placeholder {
+            color: #8c8c8c;
+        }
+
+        .get-started-btn {
+            background-color: #e50914;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .get-started-btn svg {
+            margin-left: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="logo">
+                <div class="header-right">
+                    <div class="language-select">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 14.5C11.5899 14.5 14.5 11.5899 14.5 8C14.5 4.41015 11.5899 1.5 8 1.5C4.41015 1.5 1.5 4.41015 1.5 8C1.5 11.5899 4.41015 14.5 8 14.5ZM8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="white"/>
+                            <path d="M8 3V8H12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        English
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 5px;">
+                            <path d="M8 10L4 6H12L8 10Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <button class="sign-in-btn">Sign In</button>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">Unlimited movies, TV shows and more</h1>
+                <h2 class="hero-subtitle">Starts at ₹149. Cancel at any time.</h2>
+                <p class="hero-text">Ready to watch? Enter your email to create or restart your membership.</p>
+                <div class="email-form">
+                    <input type="email" placeholder="Email address" class="email-input">
+                    <button class="get-started-btn">
+                        Get Started
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 4L16 12L8 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
