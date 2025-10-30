@@ -1,3 +1,15 @@
+// Method 2  - Terminal run these commands to give jenkins user docker access
+
+// -------------------
+
+// sudo usermod -aG docker jenkins
+// sudo systemctl restart jenkins
+
+
+
+
+
+
 // pipeline{
 //     agent any
 //     tools{
@@ -77,6 +89,8 @@
 //         }
 //     }
 // }
+
+
 
 
 pipeline {
@@ -189,3 +203,6 @@ pipeline {
         }
     }
 }
+
+
+
